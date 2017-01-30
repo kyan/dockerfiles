@@ -1,6 +1,6 @@
 FROM centos:7
 MAINTAINER paul@kyanmedia.com
-ENV REFRESHED_AT 2016-12-29
+ENV REFRESHED_AT 2017-01-30
 
 # Allow us to get the latest node version
 RUN curl --silent --location https://rpm.nodesource.com/setup_7.x | bash -
@@ -25,7 +25,12 @@ RUN yum -y update && yum install -y \
   libXext \
   libXrender \
   xorg-x11-fonts-Type1 \
-  xorg-x11-fonts-75dpi
+  xorg-x11-fonts-75dpi \
+  ntp \
+  ntpdate \
+  ntp-doc
+
+RUN chkconfig ntpd on
 
 RUN wget http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 RUN unxz wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
