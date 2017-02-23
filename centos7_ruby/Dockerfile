@@ -65,4 +65,4 @@ WORKDIR /app
 RUN gem install bundler
 
 # Install forego
-RUN rpm -i https://bin.equinox.io/c/ekMN3bCZFUn/forego-stable-linux-386.rpm
+RUN rpm -i https://bin.equinox.io/c/ekMN3bCZFUn/forego-stable-linux-amd64.rpm
