@@ -6,6 +6,7 @@ ENV REFRESHED_AT 2017-01-30
 RUN curl --silent --location https://rpm.nodesource.com/setup_7.x | bash -
 
 RUN yum -y update && yum install -y \
+  git \
   which \
   make \
   wget \
@@ -49,6 +50,13 @@ RUN wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install
   && make install \
   && rm -rf /usr/local/src/*
 RUN ruby-install --system $RUBY_VERSION
+
+# Install phantomjs
+RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN tar xjf phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN mv phantomjs-2.1.1-linux-x86_64/bin/* /usr/local/bin/
+RUN rm -rf phantomjs-2.1.1-linux-x86_64
+RUN rm -r phantomjs-2.1.1-linux-x86_64.tar.bz2
 
 # Setup app location
 RUN mkdir -p /app

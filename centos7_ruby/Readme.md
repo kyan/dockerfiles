@@ -7,6 +7,7 @@ Also includes:
 - wkhtmltopdf
 - Forego
 - Node 7
+- PhantomJS
 
 ## Build a new image for Kyan Docker Hub
 
