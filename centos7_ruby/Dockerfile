@@ -5,7 +5,11 @@ ENV REFRESHED_AT 2017-01-30
 # Allow us to get the latest node version
 RUN curl --silent --location https://rpm.nodesource.com/setup_7.x | bash -
 
+# Add yarn location
+RUN curl -o /etc/yum.repos.d/yarn.repo https://dl.yarnpkg.com/rpm/yarn.repo
+
 RUN yum -y update && yum install -y \
+  yarn \
   git \
   which \
   make \
