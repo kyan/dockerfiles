@@ -33,7 +33,8 @@ RUN yum -y update && yum install -y \
   xorg-x11-fonts-75dpi \
   ntp \
   ntpdate \
-  ntp-doc
+  ntp-doc \
+  ImageMagick
 
 RUN chkconfig ntpd on
 
