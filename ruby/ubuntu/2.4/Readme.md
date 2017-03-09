@@ -1,14 +1,12 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`2.4.0`, `2.4`, `latest` (*2.4/Dockerfile*)](https://github.com/docker-library/ruby/blob/1c70fd4133287f2273a0cd890a21c91d8da98094/2.4/Dockerfile)
+-	[`2.4.0`, `2.4`, `latest` (*2.4/Dockerfile*)](https://github.com/kyan/dockerfiles/blob/master/ruby/ubuntu/2.4/Dockerfile)
 
 # What is Ruby?
 
 Ruby is a dynamic, reflective, object-oriented, general-purpose, open-source programming language. According to its authors, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp. It supports multiple programming paradigms, including functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management.
 
 > [wikipedia.org/wiki/Ruby_(programming_language)](https://en.wikipedia.org/wiki/Ruby_%28programming_language%29)
-
-![logo](https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/ruby/logo.png)
 
 # How to use this image
 
